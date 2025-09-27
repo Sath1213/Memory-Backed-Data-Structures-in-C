@@ -1,0 +1,113 @@
+→ Creating directories bin, lib, obj, src, if they don't exist already.
+✓ Directories ready.
+→ Removing old GradingLog.txt and Grades.txt files.
+✓ Grading files cleared.
+→ Examining repo contents.
+✓ Repo contents are correct.
+→ Checking compiler.
+✓ clang detected.
+→ Checking Makefile.
+  -std=c99 found in Makefile.
+  -Wall found in Makefile.
+  -pedantic found in Makefile.
+  -fPIC found in Makefile.
+  -shared found in Makefile.
+✓ All required flags found in Makefile.
+→ Running make.
+  → make  (cwd=/workdir/studentdir)
+    clang -std=c99 -Wall -pedantic -fPIC -I./src -c src/list.c -o obj/list.o
+    clang -std=c99 -Wall -pedantic -fPIC -I./src -c src/array.c -o obj/array.o
+    clang -std=c99 -Wall -pedantic -fPIC -I./src -c src/mem.c -o obj/mem.o
+    clang -shared -fPIC -o lib/liblist.so obj/list.o
+    clang -shared -fPIC -o lib/libarray.so obj/array.o
+    clang -shared -fPIC -o lib/libmem.so obj/mem.o
+    make: *** No rule to make target 'src/test0.c', needed by 'obj/test0.o'.  Stop.
+  ✗ command failed.
+    ->
+    clang -std=c99 -Wall -pedantic -fPIC -I./src -c src/list.c -o obj/list.o
+    clang -std=c99 -Wall -pedantic -fPIC -I./src -c src/array.c -o obj/array.o
+    clang -std=c99 -Wall -pedantic -fPIC -I./src -c src/mem.c -o obj/mem.o
+    clang -shared -fPIC -o lib/liblist.so obj/list.o
+    clang -shared -fPIC -o lib/libarray.so obj/array.o
+    clang -shared -fPIC -o lib/libmem.so obj/mem.o
+    make: *** No rule to make target 'src/test0.c', needed by 'obj/test0.o'.  Stop.
+✘ make failed.
+→ Looking for Makefile outputs.
+✓ make created correct files.
+Creating test programs.
+  → clang -std=c99 -Wall -pedantic -I./.. -I./src ../atest1.c src/array.c ../mem.c -o atest1  (cwd=/workdir/studentdir)
+  ✓ Done.
+  → clang -std=c99 -Wall -pedantic -I./.. -I./src ../atest2.c src/array.c ../mem.c -o atest2  (cwd=/workdir/studentdir)
+  ✓ Done.
+  → clang -std=c99 -Wall -pedantic -I./.. -I./src ../atest3.c src/array.c ../mem.c -o atest3  (cwd=/workdir/studentdir)
+  ✓ Done.
+  → clang -std=c99 -Wall -pedantic -I./.. -I./src ../ltest1.c src/list.c ../mem.c -o ltest1  (cwd=/workdir/studentdir)
+  ✓ Done.
+  → clang -std=c99 -Wall -pedantic -I./.. -I./src ../ltest2.c src/list.c ../mem.c -o ltest2  (cwd=/workdir/studentdir)
+  ✓ Done.
+  → clang -std=c99 -Wall -pedantic -I./.. -I./src ../ltest3.c src/list.c ../mem.c -o ltest3  (cwd=/workdir/studentdir)
+  ✓ Done.
+Running atest1
+  → ./atest1  (cwd=/workdir/studentdir)
+    Dereference count is 100, but should be 0
+    Dereference count is 101, but should be 1
+    Dereference count is 104, but should be 4
+    Dereference count is 109, but should be 9
+    Dereference count is 116, but should be 16
+    Dereference count is 125, but should be 25
+    Dereference count is 136, but should be 36
+    Dereference count is 149, but should be 49
+    Dereference count is 164, but should be 64
+    Dereference count is 181, but should be 81
+    Dereference count is 200, but should be 100
+    Dereference count is 500, but should be 400
+    Dereference count is 1000, but should be 900
+    Dereference count is 1700, but should be 1600
+    Dereference count is 2600, but should be 2500
+    Dereference count is 3700, but should be 3600
+    Dereference count is 5000, but should be 4900
+    Dereference count is 6500, but should be 6400
+    Dereference count is 8200, but should be 8100
+  ✓ Done.
+✘ {errno} errors detected.
+Running ltest1
+  → ./ltest1  (cwd=/workdir/studentdir)
+  ✓ Done.
+✓ test program successful.
+Running atest2
+  → ./atest2  (cwd=/workdir/studentdir)
+  ✓ Done.
+✓ test program successful.
+Running ltest2
+  → ./ltest2  (cwd=/workdir/studentdir)
+  ✓ Done.
+✓ test program successful.
+Running atest3
+  → ./atest3  (cwd=/workdir/studentdir)
+  ✓ Done.
+✓ test program successful.
+Running ltest3
+  → ./ltest3  (cwd=/workdir/studentdir)
+  ✓ Done.
+✓ test program successful.
+→ Checking for comments.
+  src/list.c has comments.
+  src/list.h has comments.
+  src/array.c has comments.
+  src/array.h has comments.
+✓ All files have comments.
+→ Checking indentation.
+  src/list.c's indentation levels are: '', '  ', '    ', '      ', '        '.
+  src/list.c indentation is good.
+  src/list.h's indentation levels are: '', '  '.
+  src/list.h indentation is good.
+  src/array.c's indentation levels are: '', '  ', '    '.
+  src/array.c indentation is good.
+  src/array.h's indentation levels are: '', '  '.
+  src/array.h indentation is good.
+✓ All files have good indentation.
+→ Checking for #ifndef macros in header files.
+  src/util.h is missing.
+✓ All header files have #ifndef exclusions.
+→ Checking for Disclosure in README.md.
+✓ Disclosure found.
