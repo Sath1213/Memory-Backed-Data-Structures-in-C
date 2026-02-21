@@ -1,3 +1,5 @@
+## Memory Backed Data Structures in C
+
 This project implements a dynamic array and a singly linked list in C using a simulated memory allocator.
 
 
