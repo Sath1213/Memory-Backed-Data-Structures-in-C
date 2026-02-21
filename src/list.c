@@ -1,7 +1,5 @@
 /*
 Name: Sathursan Rasatheepan
-login: srasathe
-Student ID: 1343472
 Date September 26, 2025
 */
 
@@ -145,7 +143,7 @@ void list_truncate(struct list *list) {
   }
 
   // traverse to the second-last node
-  while(get_next(get_next(curr) != 0)) {
+  while(get_next(get_next(curr)) != 0) {
     curr = get_next(curr);
   }
 

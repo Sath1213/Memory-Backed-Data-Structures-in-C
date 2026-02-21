@@ -1,16 +1,10 @@
-## Build Instructions
+This project implements a dynamic array and a singly linked list in C using a simulated memory allocator.
 
-- Run 'make' in the root of the file
-- Run the program using "LD_LIBRARY_PATH=./lib ./bin/test0'
 
-## What I Learned
 
-- How to manage memory allocation, freeing, and reading/writing using a memory file (mem).
+Instead of relying on native C pointers directly, both data structures operate on integer-based memory addresses returned by a custom allocator. This simulates low-level memory management and reinforces understanding of how data structures interact with memory internally.
 
-## Issues and Surprises
 
-- Needed to use '| $(OBJ)', '| $(LIB)' and '| $(BIN)' to ensure directoreies exist before compilation
 
-## Disclosure
+The memory system (mem.c) was provided as part of the project specification. The array and list implementations were developed independently using the provided API.
 
-I completed this assignment entirely on my own.
